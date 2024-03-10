@@ -1,22 +1,67 @@
 "use strict";
 
-const str = "test";
+// const options = {
+//   name: "test",
+//   width: 1024,
+//   height: 1024,
+//   colors: {
+//     border: "black",
+//     bg: "red",
+//   },
+//   makeTest: () => {
+//     console.log("test");
+//   },
+// };
 
-console.log(str.toUpperCase());
+// options.makeTest();
 
-const fruit = "Some fruit";
+// const { border, bg } = options.colors;
+// console.log(bg);
 
-console.log(fruit.indexOf("z"));
+// console.log(Object.values(options).length);
 
-const logg = "Hello world";
+// console.log(options.name);
 
-console.log(logg.substring(0, 5));
+// options.colors.border = "white";
 
-console.log(logg.slice(0, 4));
+// console.log(options.colors.border);
 
-const num = 12.2;
+// for (let key in options) {
+//   if (typeof options[key] === "object") {
+//     for (let i in options[key]) {
+//       console.log(`${i} : ${options[key][i]}`);
+//     }
+//   } else {
+//     console.log(`${key} : ${options[key]}`);
+//   }
+// }
 
-console.log(Math.round(num));
+const arr = [1, 2, 3, 4, 5, 6, 7, 8];
 
-const test = "12.2px";
-console.log(parseFloat(test));
+// arr.pop();
+// console.log(arr);
+
+// arr.push(8);
+// console.log(arr);
+
+// for (let i = 0; i <= arr.length; i += 1) {
+//   console.log(arr[i]);
+// }
+
+// for (const i of arr) {
+//   console.log(i);
+// }
+
+let sum = 0;
+
+arr.forEach((item, idx, arr) => console.log(`${idx} - ${item} - ${arr}`));
+
+const map = arr.map((item) => item * 2);
+console.log(map);
+
+const filter = arr.filter((item) => item % 2 !== 0);
+console.log(filter);
+
+const str = prompt();
+const products = str.split(" ");
+console.log(products);
