@@ -52,16 +52,22 @@ const arr = [1, 2, 3, 4, 5, 6, 7, 8];
 //   console.log(i);
 // }
 
-let sum = 0;
+// let sum = 0;
 
-arr.forEach((item, idx, arr) => console.log(`${idx} - ${item} - ${arr}`));
+// arr.forEach((item, idx, arr) => console.log(`${idx} - ${item} - ${arr}`));
 
-const map = arr.map((item) => item * 2);
-console.log(map);
+// const map = arr.map((item) => item * 2);
+// console.log(map);
 
-const filter = arr.filter((item) => item % 2 !== 0);
-console.log(filter);
+// const filter = arr.filter((item) => item % 2 !== 0);
+// console.log(filter);
 
-const str = prompt();
-const products = str.split(" ");
-console.log(products);
+// const str = prompt();
+// const products = str.split(" ");
+// console.log(products);
+
+const answer = +prompt();
+while (answer !== 'number') {
+    const answer = prompt();
+}
+
