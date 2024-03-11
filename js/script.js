@@ -11,12 +11,12 @@
 const soldier = {
   health: 400,
   armor: 100,
+  sayHello: () => {
+    console.log("Hello!");
+  },
 };
 
-const john = {
-  health: 100,
-};
+const john = Object.create(soldier);
+console.log(john);
 
-john.__proto__ = soldier;
-
-console.log(john.armor);
+john.sayHello();
