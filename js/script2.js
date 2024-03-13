@@ -142,3 +142,41 @@ const getFriendsByOnlineStatus = function (allFriends) {
 };
 
 console.log(getFriendsByOnlineStatus(friends));
+
+const a = { x: 1, y: 2 };
+const b = { x: 0, z: 3 };
+
+const playlist = {
+  name: "My list",
+  rating: 5,
+  tracks: ["track-1", "track-2", "track-3"],
+  trackCount: 3,
+  stats: {
+    followers: 5603,
+    views: 4827,
+    likes: 1308,
+  },
+};
+
+const { followers, views, likes } = playlist.stats;
+
+console.log(followers, views);
+
+const authors = {
+  kiwi: 4,
+  poly: 7,
+  ajax: 18,
+  mango: 6,
+  gogo: 12,
+};
+
+const entries = Object.entries(authors);
+console.log(entries);
+
+let bestRating = 0;
+
+for (const [name, rating] of entries) {
+  console.log(name, rating);
+}
+
+console.log(bestRating);
