@@ -45,85 +45,104 @@
 
 // console.log(pow(2, 3));
 
-let students = {
-  js: [
-    {
-      name: "John",
-      progress: 100,
-    },
-    {
-      name: "Ivan",
-      progress: 60,
-    },
-  ],
-  html: {
-    basic: [
-      {
-        name: "Peter",
-        progress: 20,
-      },
-      {
-        name: "Anna",
-        progress: 18,
-      },
-    ],
-    pro: [
-      {
-        name: "Sam",
-        progress: 10,
-      },
-    ],
-  },
-};
+// let students = {
+//   js: [
+//     {
+//       name: "John",
+//       progress: 100,
+//     },
+//     {
+//       name: "Ivan",
+//       progress: 60,
+//     },
+//   ],
+//   html: {
+//     basic: [
+//       {
+//         name: "Peter",
+//         progress: 20,
+//       },
+//       {
+//         name: "Anna",
+//         progress: 18,
+//       },
+//     ],
+//     pro: [
+//       {
+//         name: "Sam",
+//         progress: 10,
+//       },
+//     ],
+//   },
+// };
 
-// const a = students.js;
-// const b = students.html.basic;
-// const c = students.html.pro;
+// // const a = students.js;
+// // const b = students.html.basic;
+// // const c = students.html.pro;
 
-// const arr = [...a, ...b, ...c];
-// console.log(arr);
+// // const arr = [...a, ...b, ...c];
+// // console.log(arr);
 
-function getTotalProgressByIteration(data) {
-  let total = 0;
-  let students = 0;
+// function getTotalProgressByIteration(data) {
+//   let total = 0;
+//   let students = 0;
 
-  for (const course of Object.values(data)) {
-    if (Array.isArray(course)) {
-      students += course.length;
-      for (let i = 0; i < course.length; i += 1) {
-        total += course[i].progress;
-      }
-    } else {
-      for (const subCourse of Object.values(course)) {
-        students += subCourse.length;
-        for (let i = 0; i < subCourse.length; i += 1) {
-          total += subCourse[i].progress;
-        }
-      }
-    }
-  }
+//   for (const course of Object.values(data)) {
+//     if (Array.isArray(course)) {
+//       students += course.length;
+//       for (let i = 0; i < course.length; i += 1) {
+//         total += course[i].progress;
+//       }
+//     } else {
+//       for (const subCourse of Object.values(course)) {
+//         students += subCourse.length;
+//         for (let i = 0; i < subCourse.length; i += 1) {
+//           total += subCourse[i].progress;
+//         }
+//       }
+//     }
+//   }
 
-  return total / students;
-}
+//   return total / students;
+// }
 
-console.log(getTotalProgressByIteration(students));
+// console.log(getTotalProgressByIteration(students));
 
-function getTotalProgressByRecursion(data) {
-  if (Array.isArray(data)) {
-    let total = 0;
-    for (let i = 0; i < data.length; i += 1) {
-      total += data[i].progress;
-    }
-    return [total, data.length];
-  } else {
-    let total = [0, 0];
-    for (const subData of Object.values(data)) {
-      const subDataArr = getTotalProgressByRecursion(subData);
-      total[0] += subDataArr[0];
-      total[1] += subDataArr[1];
-    }
-    return total;
-  }
-}
+// function getTotalProgressByRecursion(data) {
+//   if (Array.isArray(data)) {
+//     let total = 0;
+//     for (let i = 0; i < data.length; i += 1) {
+//       total += data[i].progress;
+//     }
+//     return [total, data.length];
+//   } else {
+//     let total = [0, 0];
+//     for (const subData of Object.values(data)) {
+//       const subDataArr = getTotalProgressByRecursion(subData);
+//       total[0] += subDataArr[0];
+//       total[1] += subDataArr[1];
+//     }
+//     return total;
+//   }
+// }
 
-console.log(getTotalProgressByRecursion(students));
+// console.log(getTotalProgressByRecursion(students));
+
+window.addEventListener("DOMContentLoaded", () => {
+  const box = document.querySelector(".box");
+
+  box.addEventListener("touchstart", (e) => {
+    e.preventDefault();
+    console.log("start");
+  });
+
+  box.addEventListener("touchmove", (e) => {
+    e.preventDefault();
+    console.log("move");
+  });
+
+  box.addEventListener("touchend", (e) => {
+    e.preventDefault();
+    console.log("end");
+  });
+});
