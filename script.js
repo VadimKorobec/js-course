@@ -122,6 +122,7 @@ function getTotalProgressByRecursion(data) {
       total[0] += subDataArr[0];
       total[1] += subDataArr[1];
     }
+    return total;
   }
 }
 
