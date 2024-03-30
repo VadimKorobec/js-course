@@ -1,3 +1,5 @@
+import { getData } from "../services/services";
+
 function cards() {
   //Use class for cards;
 
@@ -40,14 +42,6 @@ function cards() {
     }
   }
 
-  const getData = async (url) => {
-    const res = await fetch(url);
-    if (!res.ok) {
-      throw new Error(`Couldn't fetch ${url}, status: ${res.status}`);
-    }
-    return await res.json();
-  };
-
   // getData("http://localhost:3000/menu").then((data) => {
   //   data.forEach(({ img, altimg, title, descr, price }) => {
   //     new MenuCard(
@@ -61,8 +55,8 @@ function cards() {
   //   });
   // });
 
-  axios.get("http://localhost:3000/menu").then((res) => {
-    res.data.forEach(({ img, altimg, title, descr, price }) => {
+  getData("http://localhost:3000/menu").then((data) => {
+    data.forEach(({ img, altimg, title, descr, price }) => {
       new MenuCard(
         img,
         altimg,
