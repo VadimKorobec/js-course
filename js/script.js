@@ -6,4 +6,12 @@ window.addEventListener("DOMContentLoaded", () => {
   const modal = require("./modules/modal");
   const slider = require("./modules/slider");
   const timer = require("./modules/timer");
+
+  tabs();
+  calc();
+  cards();
+  forms();
+  modal();
+  slider();
+  timer();
 });
