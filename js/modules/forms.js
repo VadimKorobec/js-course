@@ -1,3 +1,6 @@
+import { closeModal } from "./modal";
+import { openModal } from "./modal";
+
 function forms() {
   //Forms;
 
@@ -78,4 +81,4 @@ function forms() {
     }, 4000);
   }
 }
-module.exports = forms;
+export default forms;
